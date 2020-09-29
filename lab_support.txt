@@ -1,0 +1,54 @@
+# -------------------------------------------------
+# LAB 1
+# -------------------------------------------------
+
+L = ['red', 'red', 'green', 'blue', 'orange']
+
+
+
+print(L)
+
+# OUTPUT > ['neerg', 'nedlog', 'eulb', 'egnaro', 'der']
+
+# -------------------------------------------------
+# LAB 2 - Determine if a number is prime or not
+# -------------------------------------------------
+
+
+
+# -------------------------------------------------
+# LAB 3 - Word Jumble Game
+# -------------------------------------------------
+
+# Create a word list
+# Pick a word
+# Jumble the word
+# Present it to the user
+# Ask for the user's guess
+# Compare and give result
+# Repeat the process for rest of the words
+# Give the final score
+
+
+# -------------------------------------------------
+# LAB 4 - Create a fibonacci module and test it
+# -------------------------------------------------
+
+# fibo.py
+
+def genfibo(n):
+  return fibolist
+
+def checkfibo(n):
+  # postuple = (left, right)
+  return postuple
+  
+# projecty.py
+
+# Project Y
+
+
+# Generate 100 random numbers
+# 1. Filter out the fibonacci numbers
+# 2. Filter out those numbers which are divisible by any of the last 7 of the
+#    first 12 fibonacci numbers
