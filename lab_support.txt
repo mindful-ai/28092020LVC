@@ -474,3 +474,59 @@ plt.show()
 
 with pd.ExcelWriter('report.xlsx') as writer:
     df.to_excel(writer)
+    
+# -------------------------------------------------
+# LAB 15 - Unit Test
+# -------------------------------------------------
+
+# testcalc.py
+
+import sys
+
+from calc import Calculator
+
+
+
+import unittest
+
+NUMBER_1 = 3.0
+NUMBER_2 = 2.0
+FAILURE = 'incorrect value'
+
+
+class CalculatorTest(unittest.TestCase):
+
+
+    def setUp(self):
+        self.calc = Calculator()
+
+    def test_last_answer_init(self):
+        pass
+
+    def test_add(self):
+        pass
+
+    def test_subtract(self):
+        pass
+
+    def test_subtract_negative(self):
+        pass
+
+    def test_multiply(self):
+        pass
+
+    def test_divide(self):
+        pass
+
+    def test_divide_by_zero(self):
+        pass
+
+    def tearDown(self):
+        pass
+
+
+if __name__ == '__main__':
+
+
+    unittest.main()
+
