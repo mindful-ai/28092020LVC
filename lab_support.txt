@@ -403,3 +403,74 @@ if m:
 m = re.search(name, content)
 if m:
     print('NAME      : ', m.groupdict()['Name'])
+    
+# -------------------------------------------------
+# LAB 9 - Virtual Environments
+# -------------------------------------------------
+
+
+# -------------------------------------------------
+# LAB 10 - Network 
+# -------------------------------------------------
+
+# Client Program
+
+message = input(" -> ")  
+
+while message.lower().strip() != 'bye':
+     client_socket.send(message.encode())  
+     data = client_socket.recv(1024).decode()  
+     print('Received from server: ' + data)  
+     message = input(" -> ") 
+
+# Server Program
+
+conn, address = server_socket.accept()  
+print("Connection from: " + str(address))
+----------------------------------------------------
+
+# Logic in while loop
+data = conn.recv(1024).decode()
+if not data:
+	break
+
+print("from connected user: " + str(data))
+data = input(' -> ')
+conn.send(data.encode())
+
+# -------------------------------------------------
+# LAB 11 - Read data from this REST end point
+# -------------------------------------------------
+
+URL: https://apex.oracle.com/pls/apex/oraclejet/lp/activities/
+
+# -------------------------------------------------
+# LAB 12 - Setup a simple Flask server
+# -------------------------------------------------
+
+1. Install Flask
+2. Serve 'Hello World' HTML content
+
+# -------------------------------------------------
+# LAB 13 - Write a script to oraganize the folder
+# -------------------------------------------------
+
+Use OS and shutil modules
+
+# -------------------------------------------------
+# LAB 14 - Solve Lab 6 with Pandas
+# -------------------------------------------------
+
+import pandas as pd
+df = pd.read_csv("student.csv")
+df['avg'] = df[['phy', 'chem', 'math', 'bio']].mean(axis=1)
+
+df['rank'] = df['avg'].rank()
+df['rank'] = df['avg'].rank(method='dense', ascending=False)
+
+import matplotlib.pyplot as plt
+plt.bar(df['regid'], df['avg'], color='m')
+plt.show()
+
+with pd.ExcelWriter('report.xlsx') as writer:
+    df.to_excel(writer)
